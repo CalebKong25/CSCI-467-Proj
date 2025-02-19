@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>  
+        <title>Login</title>
+
+        <script type="text/javascript" src="login.js"></script>
+
+    </head>
+
+    <h1>Login page</h1>
+
+    
+    <% if (messages.error) { %>
+        <%= messages.error %>
+    <% } %>
+    
+    <Form name="loginForm" action="http://127.0.0.1:3100/Login" method="post">
+        <h3 style="padding:0; margin:0" >Username</h3>
+        <input required type="text" name="username"></input> <br>
+
+        <h3 style="padding:0; margin:0">Password</h3>
+        <input required type="text" name="password"></input> <br>
+        
+        <button style="margin-top: 10px;" type="submit">Login</button>
+    </Form>
+
+    <br><br>
+    <br><br>
+        <button name="submitButton" onclick="submitLogin()">Submit</button> <br><br>
+
+    <button onclick="window.location.href='127.0.0.1:3100/';">
+        Splash Page
+    </button>
+</html>
